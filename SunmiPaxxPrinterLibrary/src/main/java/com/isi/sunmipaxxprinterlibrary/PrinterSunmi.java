@@ -9,12 +9,14 @@ public class PrinterSunmi implements Printer{
 
     private InnerPrinter printerSumni;
     private ArrayList<SunmiLine> lines = new ArrayList<>();
+    private Context c;
 
     public PrinterSunmi(Context c) {
 
         printerSumni = new InnerPrinter();
         printerSumni.connectPrinterService(c);
         printerSumni.initPrinter();
+        this.c = c;
 
     }
 
@@ -48,6 +50,7 @@ public class PrinterSunmi implements Printer{
     @Override
     public void printText() {
 
+        printerSumni.connectPrinterService(c);
         printerSumni.initPrinter();
 
         for (SunmiLine line: lines) {
