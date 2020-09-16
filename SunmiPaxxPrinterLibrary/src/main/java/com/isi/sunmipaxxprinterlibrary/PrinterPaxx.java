@@ -76,6 +76,9 @@ public class PrinterPaxx implements Printer {
 
     @Override
     public void printText() {
+
+        Log.e("Number of lines: ", "printText: " +myPage.getLines().size());
+
         Bitmap pageBitmap = paxGLPage.pageToBitmap(myPage, 384);
 
         printBitmap(pageBitmap, c);
