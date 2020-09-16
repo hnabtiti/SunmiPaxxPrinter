@@ -1,6 +1,6 @@
 # isilibrary
 
-Librearia che si interfaccia con l'applicazione IsiApp del progetto Isi.
+Librearia che si interfaccia cone le stampanti incorprorate ai dispositivi SUNMI e PAXX.
 
 Tutti i diritti riservati.
 
@@ -20,13 +20,29 @@ Come utilizzare la libreria:
 	</pre>
 
 . Sempre nel gradle importare:
-    implementation 'com.github.edoggg93:isilibrary:1.3.16'  
+    implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.4'  
 
-. L'activity che dovrà integrare il sistema dovrà estendere la IsiAppActivity.  
-. In caso di Scrollview: la scrollview dovrà essere IsiAppScrollView  
-. In caso di webview: la webView dovrà essere IsiAppWebView  
-. L'applicazione IsiApp ha in se un timer che permette l'interruzione di tutte le altre applicazioni presenti nel sistema;  
-  per svolgere operazoni prima della chiusura, fare l'override, nell'activity che estende IsiAppActivity, del metodo doSomethingOnTimeout()  
-  
+.  SUbito all'inizio del progetto aprire una istanza in questo modo
+ 
+  <pre>
+   SunmiPaxxPrinter.getInstance(MainActivity.this);
+	</pre>
+	
+.  Per l'utilizzo utilizzare questo codice di esempio
+
+<pre>
+   SunmiPaxxPrinter printer = SunmiPaxxPrinter.getInstance(ReportActivity.this);
+   
+   //Aggiungere una linea alla stampa
+   printer.addLine("Testo da inserire", intero dimensione testo, SunmiPaxxPrinter.PrinterAlignement.CENTER (enumerazione allineamento testo), SunmiPaxxPrinter.PrinterStyle.BOLD (stile del testo));
+   
+   //aggiungere linea vuota
+   printer.addSpace();
+   
+   //una volta aggiunte tutte le linee necessarie
+    printer.printText();
+   //Taglia carta (Solo su dispositivi con taglio automatico)
+   printer.cutPage();                   
+	</pre>
   
 Grazie.  
