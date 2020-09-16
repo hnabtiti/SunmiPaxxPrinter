@@ -1,4 +1,4 @@
-# isilibrary
+# SunmiPaxxPrinter
 
 Librearia che si interfaccia cone le stampanti incorprorate ai dispositivi SUNMI e PAXX.
 
@@ -8,7 +8,6 @@ Copyright: 4D Sistemi Informatici. Contattare l'amministrazione per eventuale su
 
 Come utilizzare la libreria:
 
-. La libreria lavora se e solo se sul dispositivo è stato installato il progetto IsiApp
 . Nel Gradle dell'applicazione inserire:
 <br>
 <pre>
@@ -25,13 +24,13 @@ Come utilizzare la libreria:
 .  SUbito all'inizio del progetto aprire una istanza in questo modo
  
   <pre>
-   SunmiPaxxPrinter.getInstance(MainActivity.this);
+   SunmiPaxxPrinter.getInstance(Context);
 	</pre>
 	
-.  Per l'utilizzo utilizzare questo codice di esempio
+.  Per l'implementazione utilizzare questo codice di esempio
 
 <pre>
-   SunmiPaxxPrinter printer = SunmiPaxxPrinter.getInstance(ReportActivity.this);
+   SunmiPaxxPrinter printer = SunmiPaxxPrinter.getInstance(Context);
    
    //Aggiungere una linea alla stampa
    printer.addLine("Testo da inserire", intero dimensione testo, SunmiPaxxPrinter.PrinterAlignement.CENTER (enumerazione allineamento testo), SunmiPaxxPrinter.PrinterStyle.BOLD (stile del testo));
@@ -43,6 +42,16 @@ Come utilizzare la libreria:
     printer.printText();
    //Taglia carta (Solo su dispositivi con taglio automatico)
    printer.cutPage();                   
+	</pre>
+	
+.  Per la stampa di un BitMap
+
+<pre>
+   Bitmap icon = BitmapFactory.decodeResource(getResources(), Riferimento al bitmap);
+
+   icon = getResizedBitmap(icon, 210, 210);
+
+   printer.printBitmap(icon);               
 	</pre>
   
 Grazie.  
