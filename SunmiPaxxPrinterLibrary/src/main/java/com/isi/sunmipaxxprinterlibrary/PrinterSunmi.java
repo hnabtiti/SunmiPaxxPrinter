@@ -48,6 +48,8 @@ public class PrinterSunmi implements Printer{
     @Override
     public void printText() {
 
+        printerSumni.initPrinter();
+
         for (SunmiLine line: lines) {
 
             switch (line.getAlignement()){
@@ -67,6 +69,8 @@ public class PrinterSunmi implements Printer{
             printerSumni.printText(line.getText(), line.getSize(), line.isBold(),line.isUnderlined());
 
         }
+
+        lines.clear();
     }
 
     @Override
