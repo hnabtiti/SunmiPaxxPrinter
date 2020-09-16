@@ -123,10 +123,10 @@ public class PrinterPaxx implements Printer {
                     }
                 });
             } catch (PrinterDevException e) {
-                Log.e("LOG_TAG", e.getMessage());
+                e.printStackTrace();
             }
         } catch (Exception e){
-            Log.e("", e.getMessage());
+            e.printStackTrace();
         }
 
     }
