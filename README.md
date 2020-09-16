@@ -25,7 +25,7 @@ Come utilizzare la libreria:
 	</pre>
 
 . Sempre nel gradle importare:
-    implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.8'  
+    implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.9'  
 
 .  Subito all'inizio del progetto aprire una istanza in questo modo
  
