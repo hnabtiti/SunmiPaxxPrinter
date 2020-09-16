@@ -1,0 +1,3 @@
+include ':SunmiPaxxPrinterLibrary'
+include ':app'
+rootProject.name = "SunmiPaxxPrinter"
