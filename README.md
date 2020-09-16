@@ -8,6 +8,12 @@ Copyright: 4D Sistemi Informatici. Contattare l'amministrazione per eventuale su
 
 Come utilizzare la libreria:
 
+. Nel manifest inserire:
+<br>
+<pre>
+    uses-permission android:name="com.pax.permission.PRINTER"
+	</pre>
+
 . Nel Gradle dell'applicazione inserire:
 <br>
 <pre>
@@ -19,7 +25,7 @@ Come utilizzare la libreria:
 	</pre>
 
 . Sempre nel gradle importare:
-    implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.4'  
+    implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.8'  
 
 .  Subito all'inizio del progetto aprire una istanza in questo modo
  
