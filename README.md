@@ -11,8 +11,8 @@ Come utilizzare la libreria:
 . Nel manifest inserire:
 <br>
 <pre>
-   <uses-permission android:name="com.pax.permission.PRINTER" />
-</pre>
+    <uses-permission android:name="com.pax.permission.PRINTER" />
+	</pre>
 
 . Nel Gradle dell'applicazione inserire:
 <br>
