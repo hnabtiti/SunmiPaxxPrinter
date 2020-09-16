@@ -88,6 +88,8 @@ public class PrinterPaxx implements Printer {
         Bitmap pageBitmap = paxGLPage.pageToBitmap(myPage, 384);
 
         printBitmap(pageBitmap, c);
+
+        lines.clear();
     }
 
     @Override
