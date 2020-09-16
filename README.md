@@ -21,7 +21,7 @@ Come utilizzare la libreria:
 . Sempre nel gradle importare:
     implementation 'com.github.edoggg93:SunmiPaxxPrinter:1.0.4'  
 
-.  SUbito all'inizio del progetto aprire una istanza in questo modo
+.  Subito all'inizio del progetto aprire una istanza in questo modo
  
   <pre>
    SunmiPaxxPrinter.getInstance(Context);
@@ -49,7 +49,7 @@ Come utilizzare la libreria:
 <pre>
    Bitmap icon = BitmapFactory.decodeResource(getResources(), Riferimento al bitmap);
 
-   icon = getResizedBitmap(icon, 210, 210);
+   icon = getResizedBitmap(icon, altezza desiderata, larghezza desiderata);
 
    printer.printBitmap(icon);               
 	</pre>
