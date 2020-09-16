@@ -8,7 +8,7 @@ public class SunmiPaxxPrinter implements Printer{
     private static SunmiPaxxPrinter sunmiPaxxPrinter;
     private static Printer printer;
 
-    private SunmiPaxxPrinter(Context c) { }
+    private SunmiPaxxPrinter() { }
 
     @Override
     public void addLine(String text, int dimension, PrinterAlignement alignement, PrinterStyle style) {
@@ -28,21 +28,21 @@ public class SunmiPaxxPrinter implements Printer{
     public enum PrinterAlignement{
         LEFT,
         CENTER,
-        RIGHT;
+        RIGHT
     }
 
     public enum PrinterStyle{
         NORMAL,
         BOLD,
         UNDERLINED,
-        ITALIC;
+        ITALIC
     }
 
 
     public static SunmiPaxxPrinter getInstance(Context c){
 
         if(sunmiPaxxPrinter == null){
-            sunmiPaxxPrinter = new SunmiPaxxPrinter(c);
+            sunmiPaxxPrinter = new SunmiPaxxPrinter();
 
             if(getModel().equals("A920")){
                 printer = new PrinterPaxx(c);
