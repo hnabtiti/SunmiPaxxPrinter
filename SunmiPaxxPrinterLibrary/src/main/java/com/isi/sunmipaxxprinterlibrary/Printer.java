@@ -8,4 +8,6 @@ public interface Printer {
     void addSpace();
     void printText();
     void printBitmap(Bitmap bitmap);
+    void cutPage();
+    int getSizeOfPrinter();
 }

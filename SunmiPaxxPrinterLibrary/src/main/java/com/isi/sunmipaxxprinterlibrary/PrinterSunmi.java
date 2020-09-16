@@ -74,6 +74,22 @@ public class PrinterSunmi implements Printer{
         printerSumni.printBitmap(bitmap);
     }
 
+    @Override
+    public void cutPage() {
+        printerSumni.cutPage();
+    }
+
+    @Override
+    public int getSizeOfPrinter() {
+        String mod = printerSumni.getPrinterInterface();
+
+        if(mod.contains("80")){
+            return 80;
+        }else{
+            return 58;
+        }
+    }
+
     private static class SunmiLine{
 
         private String text;

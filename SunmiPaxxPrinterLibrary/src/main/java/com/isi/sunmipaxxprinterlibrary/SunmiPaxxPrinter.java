@@ -1,6 +1,7 @@
 package com.isi.sunmipaxxprinterlibrary;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Build;
 
 public class SunmiPaxxPrinter implements Printer{
@@ -24,6 +25,22 @@ public class SunmiPaxxPrinter implements Printer{
     public void printText() {
         printer.printText();
     }
+
+    @Override
+    public void printBitmap(Bitmap bitmap) {
+        printer.printBitmap(bitmap);
+    }
+
+    @Override
+    public void cutPage() {
+        printer.cutPage();
+    }
+
+    @Override
+    public int getSizeOfPrinter() {
+        return printer.getSizeOfPrinter();
+    }
+
 
     public enum PrinterAlignement{
         LEFT,

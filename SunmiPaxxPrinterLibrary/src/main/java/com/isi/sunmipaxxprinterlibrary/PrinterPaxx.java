@@ -86,6 +86,18 @@ public class PrinterPaxx implements Printer {
         printBitmap(bitmap, c);
     }
 
+    @Override
+    public void cutPage() {
+
+
+
+    }
+
+    @Override
+    public int getSizeOfPrinter() {
+        return 58;
+    }
+
     private void printBitmap(Bitmap b, Context c) {
         if (b == null) {
             return;
