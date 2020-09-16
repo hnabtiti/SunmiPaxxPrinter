@@ -81,7 +81,12 @@ public class PrinterPaxx implements Printer {
         printBitmap(pageBitmap, c);
     }
 
-   private void printBitmap(Bitmap b, Context c) {
+    @Override
+    public void printBitmap(Bitmap bitmap) {
+        printBitmap(bitmap, c);
+    }
+
+    private void printBitmap(Bitmap b, Context c) {
         if (b == null) {
             return;
         }

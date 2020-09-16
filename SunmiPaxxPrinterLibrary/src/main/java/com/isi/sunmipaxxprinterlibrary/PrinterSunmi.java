@@ -1,6 +1,7 @@
 package com.isi.sunmipaxxprinterlibrary;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 
 import java.util.ArrayList;
 
@@ -66,6 +67,11 @@ public class PrinterSunmi implements Printer{
             printerSumni.printText(line.getText(), line.getSize(), line.isBold(),line.isUnderlined());
 
         }
+    }
+
+    @Override
+    public void printBitmap(Bitmap bitmap) {
+        printerSumni.printBitmap(bitmap);
     }
 
     private static class SunmiLine{
